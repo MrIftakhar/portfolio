@@ -192,9 +192,10 @@
         margin-bottom: 50px;
         margin-top: 0;
     }
+
     .expertise-left span {
-            margin-bottom: 20px;
-        }
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -206,5 +207,109 @@
     .expertise-right .boxes-wrapper,
     .expertise-right .boxs-wrapper {
         margin-bottom: 16px;
+    }
+}
+
+/* ==========================================
+   Process / Approach Section
+   ========================================== */
+.process {
+    background-color: #061123;
+    /* Deep navy background matching hero/expertise */
+}
+
+/* Centered Header Block */
+.process-top {
+    text-align: center;
+    margin-bottom: 80px;
+
+    span {
+        color: var(--zo-theme-primary);
+        font-size: var(--zo-fz-p5);
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+}
+
+
+/* Card Wrapper Reset */
+.card-wrapper {
+    height: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #151F34;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-wrapper:hover {
+    transform: translateY(-5px);
+    background-color: #28354d;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+/* Step Numbers: "01", "02", "03", "04" */
+.card span {
+    display: block;
+    color: var(--zo-common-white);
+    /* Muted slate blue number accent */
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Card Heading: "Understand", "Build", etc. */
+.card .head {
+    color: #9cbbf0;
+    /* Soft light blue heading */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    float: left;
+}
+
+/* Card Paragraph Text */
+.card p {
+    color: #94a3b8;
+    /* Muted slate body text */
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+    .process-top {
+        margin-bottom: 40px;
+    }
+
+    .card-wrapper {
+        margin-bottom: 32px;
+    }
+
+    /* Remove bottom margin on last item in mobile grid */
+    .col-sm-12:last-child .card-wrapper {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .card-wrapper {
+        margin-bottom: 32px;
+    }
+    .col-sm-12:last-child .card-wrapper {
+        margin-bottom: 0;
+        padding-bottom: 50px;
     }
 }
