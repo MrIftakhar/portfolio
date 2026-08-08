@@ -83,12 +83,128 @@
 @media (max-width: 575px) {
     .hero-left {
         margin-top: 20px;
-        .white-btn{
+
+        .white-btn {
             margin-bottom: 50px;
         }
     }
+
     .hero-right img {
         height: 280px;
         border-radius: 10px;
+    }
+}
+
+/* ==========================================
+   Expertise Section
+   ========================================== */
+.expertise {
+    background-color: #132345;
+    color: #ffffff;
+}
+
+.expertise-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Left Column Styling */
+.expertise-left {
+    padding-right: 40px;
+    margin-top: 100px;
+
+    span {
+        color: var(--zo-theme-primary);
+        font-size: var(--zo-fz-p5);
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: var(--zo-fz-p4);
+        font-weight: 300;
+        margin-bottom: 35px;
+    }
+}
+
+/* ==========================================
+   Right Column / Service Cards Grid
+   ========================================== */
+.expertise-right .boxes-wrapper,
+.expertise-right .boxs-wrapper {
+    margin-bottom: 24px;
+}
+
+/* Card Container */
+.boxs {
+    background-color: #222d42;
+    /* Slate blue card background */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 28px 24px;
+    height: 100%;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Hover Effect */
+.boxs:hover {
+    transform: translateY(-5px);
+    background-color: #28354d;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Icon Styling */
+.boxs img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+/* Card Heading: "Design to Code", "Frontend Dev", etc. */
+.boxs .headding {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Card Description */
+.boxs p:not(.headding) {
+    color: var(--zo-common-white);
+    font-size: var(--zo-fz-p6);
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+    .expertise-left {
+        padding-right: 0;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+    .expertise-left span {
+            margin-bottom: 20px;
+        }
+}
+
+@media (max-width: 575px) {
+
+    .boxs {
+        padding: 22px 18px;
+    }
+
+    .expertise-right .boxes-wrapper,
+    .expertise-right .boxs-wrapper {
+        margin-bottom: 16px;
     }
 }
