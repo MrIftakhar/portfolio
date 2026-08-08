@@ -1,0 +1,108 @@
+ 
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
+$font-url2: 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap';
+$font-url3: 'https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Story+Script&display=swap';
+$font-url4: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap';
+
+// font family
+$font-family: (
+    ff: (
+        body: "'Manrope', sans-serif",
+        heading: "'Kaushan Script', cursive",
+        p: "'Inter', sans-serif",
+        heading-2: "'Figtree', sans-serif",
+        menu: "'Inter', sans-serif",
+        button: "'Inter', sans-serif",
+        logo: "'Cormorant Garamond', serif",
+    )
+);
+
+// Font Weight
+$font-scale: (
+  fw: (
+    normal: normal,
+    regular: 400,
+    medium: 500,
+    sbold: 600,
+    bold: 700,
+    heading: 600,
+    ebold: 800,
+    black: 900,
+  )
+);
+
+// Font Sizes (px) — Desktop
+$font-size: (
+  fz: (
+    body: 20px,
+    p: 24px,
+    p2: 20px,
+    p3: 20px,
+    p4: 16px,
+    p5: 18px,
+    p6: 12px,
+    p7: 8px,
+
+    h1: 64px,
+    h2: 48px,
+    h3: 36px,
+    h4: 32px,
+    button: 16px,
+  )
+);
+
+// Font Sizes (px) — Tablet
+$font-size-tab: (
+  fz-tab: (
+    body: 18px,
+    h1: 48px,
+    h2: 48px,
+    h3: 32px,
+    h4: 28px,
+    button: 16px,
+  )
+);
+
+// Font Sizes (px) — Mobile
+$font-size-mob: (
+  fz-mob: (
+    body: 16px,
+    h1: 36px,
+    h2: 30px,
+    h3: 26px,
+    h4: 22px,
+    p2: 16px,
+    p4: 14px,
+    button: 16px,
+  )
+);
+
+// Line Heights 
+$line-height: (
+  lh: (
+    body: 1.6,
+    p: 1.6,
+    p2: 1.6,
+    p3: 1.34,
+    p4: 1.5,
+    p5: 1.2,
+    p6:1,
+
+    h1: 1.18,  // 118%
+    h2: 1.25,   // 120%
+    h3: 1.3,   // 130%
+    h4: 1.2,   // 120%
+
+    h1-tab: 1.18,
+    h2-tab: 1.25,
+    h3-tab: 1.3,
+    h4-tab: 1.2,
+
+    h1-mob: 1.18,
+    h2-mob: 1.25,
+    h3-mob: 1.3,
+    h4-mob: 1.2,
+  )
+);
