@@ -893,6 +893,8 @@ p {
 .primary-btn:hover {
   color: var(--zo-common-white);
   background: var(--zo-heading-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
 }
 @media (max-width: 575.98px), only screen and (min-width: 576px) and (max-width: 767.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
   .primary-btn {
@@ -921,6 +923,8 @@ p {
 .white-btn:hover {
   color: var(--zo-common-white);
   background: var(--zo-heading-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
 }
 @media (max-width: 575.98px), only screen and (min-width: 576px) and (max-width: 767.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
   .white-btn {
@@ -953,6 +957,8 @@ p {
 .learn-more-btn:hover {
   color: var(--zo-common-white);
   background: var(--zo-heading-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
 }
 @media (max-width: 575.98px), only screen and (min-width: 576px) and (max-width: 767.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
   .learn-more-btn {
@@ -2165,7 +2171,7 @@ footer .footer-v1-wrapper .footer-copyright-wrapper .row .footer-social ul li a.
 }
 
 /*----------------------------------------*/
-/*  11. PAGES INDEX1 CSS START
+/*  11. PAGES home CSS START
 /*----------------------------------------*/
 /* ============================
    Base
@@ -3281,5 +3287,92 @@ body {
   .footer-copyright-col {
     text-align: center;
     margin-top: 15px;
+  }
+}
+/*----------------------------------------*/
+/*  11. PAGES about CSS START
+/*----------------------------------------*/
+/* ==========================================
+   About Hero Section
+   ========================================== */
+.about-hero {
+  background-color: #061123;
+  /* Radial glow in the center-left similar to the reference design */
+  background-image: radial-gradient(circle at 30% 50%, rgba(14, 43, 86, 0.6) 0%, rgb(6, 17, 35) 70%);
+  overflow: hidden;
+}
+
+.about-hero-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Left Column Styling */
+.hero-left {
+  margin-top: 150px;
+  padding-right: 30px;
+}
+.hero-left h2 {
+  color: var(--zo-theme-primary);
+  margin-bottom: 10px;
+}
+.hero-left h3 {
+  margin-bottom: 14px;
+}
+.hero-left h3 span {
+  color: var(--zo-theme-primary);
+  /* Keeps accent text clean if needed */
+}
+.hero-left p {
+  font-size: var(--zo-fz-p4);
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+/* Right Column Image Container */
+.hero-right {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero-right img {
+  width: 100%;
+  max-width: 650px;
+  height: 650px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  /* Smooth rounded image corners */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  /* Soft drop shadow */
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+  .hero-left {
+    padding-right: 0;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .hero-right {
+    justify-content: center;
+  }
+  .hero-right img {
+    height: 400px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-left {
+    margin-top: 20px;
+  }
+  .hero-left .white-btn {
+    margin-bottom: 50px;
+  }
+  .hero-right img {
+    height: 280px;
+    border-radius: 10px;
   }
 }/*# sourceMappingURL=main.css.map */
