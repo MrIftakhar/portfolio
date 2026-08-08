@@ -91,10 +91,12 @@ body {
 
 .hero-desc {
   margin-bottom: 20px;
+
   p {
     font-size: var(--zo-fz-p4);
     font-weight: 300;
     margin-bottom: 15px;
+
     span {
       font-family: var(--zo-ff-p);
       font-weight: bold;
@@ -267,10 +269,13 @@ body {
 .about-text-col {
   display: grid;
   justify-content: center;
-  padding: 100px 0 0 50px;
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
   }
 }
 
@@ -283,6 +288,19 @@ body {
 .about-desc {
   font-weight: 300;
   margin-bottom: 20px;
+
+  p {
+    font-size: var(--zo-fz-p4);
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+
+  span {
+    font-family: var(--zo-ff-p);
+    font-weight: bold;
+    color: var(--zo-common-white);
+    font-size: 18px;
+  }
 }
 
 /* Orbit layout */
@@ -301,15 +319,18 @@ body {
   background: radial-gradient(circle, rgba(168, 85, 247, 0.45) 0%, rgba(168, 85, 247, 0.12) 45%, rgba(10, 20, 41, 0) 75%);
 
   @media (max-width: 992px) {
-    transform: scale(0.8); /* 400px equivalent */
+    transform: scale(0.8);
+    /* 400px equivalent */
   }
 
   @media (max-width: 768px) {
-    transform: scale(0.65); /* 325px equivalent */
+    transform: scale(0.65);
+    /* 325px equivalent */
   }
 
   @media (max-width: 480px) {
-    transform: scale(0.52); /* 260px equivalent */
+    transform: scale(0.52);
+    /* 260px equivalent */
   }
 }
 
@@ -359,13 +380,23 @@ body {
 }
 
 @keyframes spin-ring-forward {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 @keyframes spin-ring-reverse {
-  from { transform: translate(-50%, -50%) rotate(360deg); }
-  to { transform: translate(-50%, -50%) rotate(0deg); }
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 }
 
 .orbit-icon {
@@ -405,13 +436,23 @@ body {
 }
 
 @keyframes hold-upright-forward {
-  from { transform: rotate(calc(-1 * var(--angle) - 0deg)); }
-  to { transform: rotate(calc(-1 * var(--angle) - 360deg)); }
+  from {
+    transform: rotate(calc(-1 * var(--angle) - 0deg));
+  }
+
+  to {
+    transform: rotate(calc(-1 * var(--angle) - 360deg));
+  }
 }
 
 @keyframes hold-upright-reverse {
-  from { transform: rotate(calc(-1 * var(--angle) - 360deg)); }
-  to { transform: rotate(calc(-1 * var(--angle) - 0deg)); }
+  from {
+    transform: rotate(calc(-1 * var(--angle) - 360deg));
+  }
+
+  to {
+    transform: rotate(calc(-1 * var(--angle) - 0deg));
+  }
 }
 
 .orbit-icon img {
@@ -433,6 +474,7 @@ body {
   .about-description {
     text-align: center;
   }
+
   .about-orbit-col {
     height: 300px;
   }

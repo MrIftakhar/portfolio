@@ -2428,10 +2428,12 @@ body {
 .about-text-col {
   display: grid;
   justify-content: center;
-  padding: 100px 0 0 50px;
 }
 .about-text-col h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+.about-text-col h3 {
+  margin-bottom: 10px;
 }
 
 .about-description span {
@@ -2441,6 +2443,17 @@ body {
 .about-desc {
   font-weight: 300;
   margin-bottom: 20px;
+}
+.about-desc p {
+  font-size: var(--zo-fz-p4);
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.about-desc span {
+  font-family: var(--zo-ff-p);
+  font-weight: bold;
+  color: var(--zo-common-white);
+  font-size: 18px;
 }
 
 /* Orbit layout */
@@ -2460,17 +2473,20 @@ body {
 }
 @media (max-width: 992px) {
   .orbit-wrap {
-    transform: scale(0.8); /* 400px equivalent */
+    transform: scale(0.8);
+    /* 400px equivalent */
   }
 }
 @media (max-width: 768px) {
   .orbit-wrap {
-    transform: scale(0.65); /* 325px equivalent */
+    transform: scale(0.65);
+    /* 325px equivalent */
   }
 }
 @media (max-width: 480px) {
   .orbit-wrap {
-    transform: scale(0.52); /* 260px equivalent */
+    transform: scale(0.52);
+    /* 260px equivalent */
   }
 }
 
