@@ -84,14 +84,24 @@ body {
   }
 
   span {
-    font-family: var(--zo-ff-heading);
+    font-family: var(--zo-ff-logo);
     color: var(--zo-theme-primary);
   }
 }
 
 .hero-desc {
-  font-weight: 300;
   margin-bottom: 20px;
+  p {
+    font-size: var(--zo-fz-p4);
+    font-weight: 300;
+    margin-bottom: 15px;
+    span {
+      font-family: var(--zo-ff-p);
+      font-weight: bold;
+      color: var(--zo-common-white);
+      font-size: 18px;
+    }
+  }
 }
 
 /* Social icons */
