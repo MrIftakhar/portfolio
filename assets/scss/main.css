@@ -919,7 +919,38 @@ p {
   cursor: pointer;
   display: inline-flex;
   transition: all ease-in-out 0.3s;
-<<<<<<< HEAD
+  margin-right: 20px;
+}
+.white-btn:hover {
+  color: var(--zo-common-white);
+  background: var(--zo-heading-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+}
+@media (max-width: 575.98px), only screen and (min-width: 576px) and (max-width: 767.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .white-btn {
+    padding: 20px 40px;
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .white-btn {
+    padding: 25px 40px;
+  }
+}
+
+.learn-more-btn {
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color: var(--zo-common-white);
+  background-color: var(--zo-theme-primary);
+  font-family: var(--zo-ff-p2);
+  font-size: var(--zo-fz-button);
+  font-weight: var(--zo-fw-sbold);
+  border-radius: 200px;
+  transition: all ease-in-out 0.3s;
+  curso<<<<<<< HEAD
   margin-right: 20px;
 =======
 >>>>>>> 0fabd7bc5fb1a388d12503c68b969266e9aed5b4
@@ -3584,7 +3615,6 @@ body {
     margin-bottom: 0;
     padding-bottom: 50px;
   }
-<<<<<<< HEAD
 }
 /* ==========================================
    Academic / Educational Journey Section
@@ -4140,6 +4170,4 @@ body.bg-dark-custom {
     transform: scale(0.8);
     opacity: 0.8;
   }
-=======
->>>>>>> 0fabd7bc5fb1a388d12503c68b969266e9aed5b4
-}/*# sourceMappingURL=main.css.map */
+}
