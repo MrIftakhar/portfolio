@@ -919,7 +919,10 @@ p {
   cursor: pointer;
   display: inline-flex;
   transition: all ease-in-out 0.3s;
+<<<<<<< HEAD
   margin-right: 20px;
+=======
+>>>>>>> 0fabd7bc5fb1a388d12503c68b969266e9aed5b4
 }
 .white-btn:hover {
   color: var(--zo-common-white);
@@ -3581,6 +3584,7 @@ body {
     margin-bottom: 0;
     padding-bottom: 50px;
   }
+<<<<<<< HEAD
 }
 /* ==========================================
    Academic / Educational Journey Section
@@ -4136,4 +4140,6 @@ body.bg-dark-custom {
     transform: scale(0.8);
     opacity: 0.8;
   }
+=======
+>>>>>>> 0fabd7bc5fb1a388d12503c68b969266e9aed5b4
 }/*# sourceMappingURL=main.css.map */
