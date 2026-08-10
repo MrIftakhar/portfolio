@@ -1,0 +1,240 @@
+//Menu CSS Start Form Here
+.main-menu {
+    text-align: center;
+
+    nav {
+        ul {
+            position: relative;
+            li {
+                &:hover .submenu {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scaleY(1);
+                }
+
+                &:hover .mega-menu {
+                    transform: scaleY(1);
+                    visibility: visible;
+                    opacity: 1;
+                    top: 52px;
+                    width: 100%;
+                }
+
+                list-style: none;
+                display: inline-block;
+                margin-right: 30px;
+                position: relative;
+                transition: all 0.3s ease-out 0s;
+                &:last-child{
+                    margin-right: 0;
+                }
+                @media #{$xl} {
+                    margin-right: 10px;
+                }
+
+
+                @media #{$lg} {
+                    .p-lg-inherit {
+                        position: inherit;
+                    }
+                }
+
+                .submenu,
+                .sub-submenu {
+                    position: absolute;
+                    top: 118px;
+                    left: 0;
+                    width: 100%;
+                    z-index: 99;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform-origin: top center;
+                    transform: scaleY(0);
+                    box-shadow: 0px 20px 30px rgba(3, 4, 28, 0.1);
+                    transition: all 0.3s ease-out;
+                    background: transparent;
+                }
+                .sub-submenu {
+                    top: -1px !important;
+                }
+
+                &:hover>.submenu {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scaleY(1);
+                }
+
+                .submenu li {
+                    position: relative;
+                    .sub-submenu {
+                        transform: scaleY(0);
+                        margin-left: 201px;
+                    }
+                    &:hover>.sub-submenu {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: scaleY(1);
+                    }
+                }
+                .submenu, 
+                .sub-submenu {
+                    z-index: 99;
+                    li{
+                        margin-right: 0;
+                        min-width: 200px;
+                        border-bottom: 1px solid var(--zo-border-1);
+                        background: var(--zo-common-white);
+                        z-index: 99;
+                        &:first-child{
+                            border-top: 1px solid var(--zo-border-1);
+                        }
+                    }
+                }
+                .submenu li a,
+                .sub-submenu li a {
+                    display: block;
+                    padding: 12px 24px;
+                    color: var(--zo-common-black);
+                    text-transform: capitalize;
+                    transition: all 0.3s ease-out;
+                    font-family: var(--zo-ff-menu);
+                    font-size: var(--zo-fz-p2);
+                    line-height: var(--zo-lh-p2);
+
+                    &:hover {
+                        color: var(--zo-theme-primary);
+                        padding-left: 35px;
+                    }
+                }
+
+
+                >a {
+                    display: inline-block;
+                    color: var(--zo-common-black);
+                    padding: 46px 0;
+                    text-align: left;
+                    transition: all 0.3s ease;
+                    position: relative;
+                    font-weight: var(--zo-fw-regular);
+                    font-family: var(--zo-ff-menu);
+                    font-size: 16px;
+                    i{
+                        @media #{$xl} {
+                            margin-left: -4px;
+                        }
+                    }
+                }
+                &:hover > a,
+                .submenu li:hover > a {
+                    color: var(--zo-theme-primary);
+                }
+            }
+
+            .mega-menu {
+                position: absolute;
+                z-index: 9999;
+                top: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+                transform-origin: top;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                max-width: 700px !important;
+                width: 100%;
+                min-height: 320px;
+                height: 100%;
+                background: var(--zo-common-white);
+                transform: scaleY(0);
+                border-top: 1px solid var(--zo-border-1);
+                box-shadow: 0px 20px 30px rgba(3, 4, 28, 0.1);
+            }
+        }
+    }
+
+}
+
+.main-menu nav ul li>a {
+    position: relative;
+}
+
+.main-menu nav ul li>a:hover {
+    color: var(--zo-theme-primary);
+}
+
+.main-menu nav ul li .submenu li:hover {
+    color: var(--zo-theme-primary);
+}
+
+.main-has-submenu {
+    width: 100%;
+    padding: 30px 30px 10px 30px;
+    background-color: var(--zo-common-white);
+    left: 0;
+    right: 0;
+
+    @media #{$lg,$md,$sm,$xs} {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    @media #{$md,$sm,$xs} {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        border: none;
+    }
+
+    .homemenu {
+        padding: 0px 10px;
+        max-width: 250px;
+        width: 100%;
+        max-height: 250px;
+        height: 100%;
+        @media #{$xs, $sm, $lg, $md}{
+            margin: 22px 0;
+        }
+        .homemenu-thumb {
+            box-shadow: 0 1px 3px #010f1c33;
+            @include transition (.3s);
+            a {
+                position: relative;
+                display: block;
+                overflow: hidden;
+
+                img {
+                    @include transition (.3s);
+                    width: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 1 / 1;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .homemenu-title {
+            a {
+                padding: 0;
+                font-size: 16px;
+                font-weight: 500;
+                background-image: linear-gradient(var(--zo-theme-primary), var(--zo-theme-primary)), linear-gradient(var(--zo-theme-primary), var(--zo-theme-primary));
+                background-size: 0 1px, 0 1px;
+                background-position: 100% 100%, 0 100%;
+                background-repeat: no-repeat;
+                transition: background-size 0.3s linear;
+                color: var(--zo-common-black);
+
+                &:hover {
+                    background-size: 0 1px, 100% 1px;
+                    background-position: 100% 100%, 0 100%;
+                    transition: background-size 0.3s linear;
+                    color: var(--zo-theme-primary);
+                }
+            }
+        }
+    }
+}

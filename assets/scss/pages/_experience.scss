@@ -1,0 +1,325 @@
+/* ==========================================
+   Experience Hero / Section Header
+   ========================================== */
+.hero-top {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    /* Main Title: "Experience" */
+    h2 {
+        color: #ffffff;
+        font-size: 52px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        line-height: 1.1;
+        margin-bottom: 16px;
+    }
+
+    /* Subtitle: "Building, Learning, and Growing..." */
+    span {
+        display: block;
+        color: #92b7f7;
+        /* Soft vibrant blue */
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 1.35;
+        margin-bottom: 24px;
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Description Paragraph */
+    p {
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 767px) {
+    .hero-top {
+        h2 {
+            font-size: 38px;
+        }
+
+        span {
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: 14.5px;
+        }
+    }
+}
+
+/* ==========================================
+   Professional Growth Section
+   ========================================== */
+.growth-section {
+    background-color: #061123;
+    color: #ffffff;
+
+    .growth-wrapper {
+
+        /* Section Title with Orange Dash Bar */
+        h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        /* Row Counter Setup */
+        .row {
+            counter-reset: growth-step;
+        }
+
+        /* Card Wrapper & Step Increment */
+        .growth-card-wrapper {
+            height: 100%;
+            counter-increment: growth-step;
+        }
+
+        /* Main Card Styling */
+        .growth-cards {
+            background-color: #121c2e;
+            /* Dark card background */
+            border-radius: 14px;
+            padding: 32px 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+            }
+
+            /* Icon Box Container */
+            img {
+                width: 50px;
+                height: 50px;
+                background-color: #1a2638;
+                /* Soft dark badge background */
+                border-radius: 10px;
+                object-fit: contain;
+                margin-bottom: 24px;
+            }
+
+            /* Automatic Step Numbers (01, 02, 03, 04) */
+            &::before {
+                content: "0" counter(growth-step);
+                display: block;
+                color: #d97706;
+                /* Warm orange step number */
+                font-size: 13px;
+                font-weight: 700;
+                margin-bottom: 8px;
+                letter-spacing: 0.5px;
+            }
+
+            /* Card Title */
+            h5 {
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+
+            /* Card Paragraph */
+            p {
+                color: #94a3b8;
+                /* Muted description text */
+                font-size: 14px;
+                line-height: 1.6;
+                font-weight: 300;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+    .growth-section {
+        .growth-card-wrapper {
+            margin-bottom: 24px;
+        }
+
+        /* Remove bottom margin on last items */
+        .row>div:last-child .growth-card-wrapper {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .growth-section {
+        .growth-wrapper h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .growth-cards {
+            padding: 24px 20px;
+        }
+    }
+}
+
+// Custom Variables matching the reference UI
+$bg-main: #0B0F19;
+$bg-card: #111827;
+$border-card: #1F2937;
+$text-muted-custom: #9CA3AF;
+$orange-glow: #FF6B00;
+$badge-bg: #1A2333;
+
+body.bg-dark-custom {
+  background-color: $bg-main;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.section-title h2 {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: $orange-glow;
+}
+
+// Experience Card styling
+.experience-card {
+  background-color: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: 16px;
+  padding: 2.25rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: rgba($orange-glow, 0.4);
+  }
+
+  .date-range {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: $orange-glow;
+    text-transform: uppercase;
+  }
+
+  .company-title-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .company-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .job-role {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #60A5FA; // Light accent blue
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  // Bullet points list
+  .bullet-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.75rem;
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #D1D5DB;
+      font-size: 0.95rem;
+      line-height: 1.6;
+
+      &::before {
+        content: "▶";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 0.7rem;
+        color: $orange-glow;
+      }
+    }
+  }
+
+  // Skill Pills / Badges
+  .skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .skill-badge {
+      background-color: $badge-bg;
+      color: #93C5FD;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      border: 1px solid rgba(147, 197, 253, 0.15);
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+// Glowing Orange Pulse Dot
+.glowing-dot {
+  width: 10px;
+  height: 10px;
+  background-color: $orange-glow;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 0 10px $orange-glow;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba($orange-glow, 0.6);
+    animation: pulseGlow 1.8s infinite ease-in-out;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+}

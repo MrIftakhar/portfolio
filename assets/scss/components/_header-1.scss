@@ -1,0 +1,103 @@
+/*----------------------------------------*/
+/*  04. HEADER-1 CSS START
+/*----------------------------------------*/
+
+.header-v1-area {
+    border-bottom: 1px solid var(--zo-border-1);
+    background: var(--zo-common-white);
+
+    @media #{$xs,$sm,$md,$lg} {
+        padding: 20px 0;
+    }
+
+    .logo-area {
+        img {
+            max-width: 176px;
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .header-right-action {
+        gap: 30px;
+        justify-content: end;
+
+        .get-started-btn {
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        @media #{$xs,$sm,$md} {
+            gap: 12px;
+        }
+
+        .user-section {
+            gap: 10px;
+
+            .user,
+            .cart,
+            .menubar {
+                width: 35px;
+                height: 35px;
+                border: 1px solid var(--zo-common-black);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+
+                a {
+                    line-height: 1;
+                }
+
+                svg {
+                    width: 16px;
+                    height: 18px;
+                }
+
+                i {
+                    font-size: 20px;
+                }
+
+                button {
+                    border: none;
+                    background: none;
+                    outline: none;
+                    font-size: 20px;
+                }
+            }
+
+            .menubar {
+                display: none;
+
+                @media #{$xs,$sm,$md,$lg} {
+                    display: inline-flex;
+                }
+            }
+
+            .cart {
+                position: relative;
+
+                .cart-count {
+                    font-size: 11px;
+                    line-height: 1;
+                    background: var(--zo-common-black);
+                    color: var(--zo-common-white);
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: -8px;
+                    right: -5px;
+                }
+            }
+
+        }
+    }
+}

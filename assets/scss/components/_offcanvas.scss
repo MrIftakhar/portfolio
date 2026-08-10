@@ -1,0 +1,214 @@
+//OFCANVAS MENU
+
+
+.offcanvas-menu {
+    margin-bottom: 40px;
+
+    ul {
+        list-style: none;
+
+        li {
+            position: relative !important;
+
+            &:not(:last-child)>a {
+                border-bottom: 1px solid var(--zo-border-1);
+            }
+
+            a {
+                padding: 12px 0;
+                display: block;
+                font-size: var(--zo-fz-p);
+                font-weight: 600;
+                font-family: var(--zo-ff-menu);
+
+                @media#{$xs} {
+                    font-size: var(--zo-fz-p2);
+                }
+
+                &:hover {
+                    color: var(--zo-theme-primary);
+                }
+            }
+
+            &.active {
+                >a {
+                    color: var(--zo-theme-primary);
+                }
+
+
+            }
+
+            .submenu {
+                display: none;
+                padding-left: 20px;
+            }
+
+            .sub-submenu {
+                display: none;
+                padding-left: 20px;
+            }
+
+            .mega-menu {
+                display: none;
+                padding-left: 0;
+            }
+
+            .megamenu-list {
+                ul {
+                    li {
+                        a {
+                            border-bottom: 1px solid var(--zo-border-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .homemenu-title {
+        margin-bottom: 25px;
+    }
+
+    .menu-close {
+        background: var(--zo-theme-primary);
+        border-color: var(--zo-theme-primary);
+
+        i {
+            transform: rotate(90deg);
+        }
+    }
+
+    .menu-close {
+        position: absolute;
+        right: 0;
+        top: 11px;
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        background: var(--z0-bg-1);
+        border: 1px solid rgba(1, 15, 28, 0.12);
+    }
+
+    @media #{$xs,$sm,$md, $lg} {
+        ul {
+            li {
+                a {
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.body-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99998;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.body-overlay.opened {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+.offcanvas-logo svg {
+    max-width: 60px;
+    width: 100%;
+}
+
+
+.offcanvas-area {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    z-index: 99999;
+    padding: min(48px, 8%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    background: var(--zo-common-white);
+    overscroll-behavior-y: contain;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    transition-delay: 0s;
+}
+
+.offcanvas-area.opened {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0.5s; // Waits until overlay finishes
+}
+
+
+// Responsive rules remain unchanged
+@media #{$xss} {
+    .offcanvas-area {
+        padding: 35px 30px;
+    }
+}
+
+@media #{$xs} {
+    .offcanvas-area {
+        width: 100%;
+    }
+}
+
+@media #{$sm} {
+    .offcanvas-area {
+        width: 450px;
+    }
+}
+
+
+.offcanvas-top {
+    margin-bottom: 16px;
+}
+
+.offcanvas-close-btn {
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--zo-common-white);
+    width: 40px;
+    height: 40px;
+    background: var(--zo-theme-primary);
+    font-size: 20px;
+    @include transition(.3s);
+    border: 1px solid transparent;
+
+    &:hover svg path {
+        stroke: var(--zo-theme-primary);
+    }
+
+    &:hover {
+        background: var(--zo-common-white);
+        border: 1px solid var(--zo-theme-primary);
+    }
+
+    svg {
+        width: 30px;
+    }
+}

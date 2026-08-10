@@ -1,0 +1,231 @@
+@import "../utils";
+
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: Drivico - Driving School HTML Template
+    Author: Zodevs
+    Support: zodevs25@gmail.com
+    Description: Drivico  – HTML5 Template
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+    01. THEME DEFAULT CSS
+    02. HEADER CSS
+
+
+
+**********************************************/
+
+/*----------------------------------------*/
+/*  01. THEME DEFAULT CSS START
+/*----------------------------------------*/
+
+@import url($font-url);
+@import url($font-url2);
+@import url($font-url3);
+@import url($font-url4);
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter_28pt-Black.ttf") format("truetype"),
+    url("../fonts/Inter/Inter_28pt-Bold.ttf") format("truetype"),
+    url("../fonts/Inter/Inter_28pt-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Inter/Inter_28pt-Medium.ttf") format("truetype"),
+    url("../fonts/Inter/Inter_28pt-Regular.ttf") format("truetype"),
+    url("../fonts/Inter/Inter_28pt-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope/Manrope-Bold.ttf") format("truetype"),
+    url("../fonts/Manrope/Manrope-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Manrope/Manrope-Medium.ttf") format("truetype"),
+    url("../fonts/Manrope/Manrope-Regular.ttf") format("truetype"),
+    url("../fonts/Manrope/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/Figtree/Figtree-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kaushan Script";
+  src: url("../fonts/Kaushan_Script/KaushanScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*---------------------------------
+    typography css start 
+---------------------------------*/
+.full-container {
+  max-width: 1460px;
+}
+
+.half-container {
+  max-width: 1212px;
+}
+
+body {
+  font-family: var(--zo-ff-p);
+  font-size: var(--zo-fz-body);
+  font-weight: normal;
+  color: var(--zo-text-body);
+  line-height: var(--zo-lh-body);
+  overflow-x: hidden;
+
+  @media #{$xs} {
+    font-size: var(--zo-fz-p2);
+    line-height: var(--zo-lh-p2);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--zo-heading-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--zo-ff-logo);
+  color: var(--zo-common-white);
+  margin: 0;
+  font-weight: var(--zo-fw-heading);
+  @include transition(0.3s);
+}
+
+h1 {
+  font-size: var(--zo-fz-h1);
+  line-height: var(--zo-lh-h1);
+
+  @media #{$md} {
+    font-size: var(--zo-fz-tab-h1);
+    line-height: var(--zo-lh-h1-tab);
+  }
+
+  @media #{$sm, $xs} {
+    font-size: var(--zo-fz-mob-h1);
+    line-height: var(--zo-lh-h1-mob);
+  }
+}
+
+h2 {
+  font-size: var(--zo-fz-h2);
+  line-height: var((--zo-lh-h2));
+
+  @media #{$md} {
+    font-size: var(--zo-fz-tab-h2);
+    line-height: var(--zo-lh-h2-tab);
+  }
+
+  @media #{$sm, $xs} {
+    font-size: var(--zo-fz-mob-h2);
+    line-height: var(--zo-lh-h2-mob);
+  }
+}
+
+h3 {
+  font-size: var(--zo-fz-h3);
+  line-height: var(--zo-lh-h3);
+
+  @media #{$md} {
+    font-size: var(--zo-fz-tab-h3);
+  }
+
+  @media #{$sm, $xs} {
+    font-size: var(--zo-fz-mob-h3);
+    line-height: var(--zo-lh-h3-mob);
+  }
+}
+
+h4 {
+  font-size: var(--zo-fz-h4);
+  line-height: var(--zo-lh-h4);
+
+  @media #{$md} {
+    font-size: var(--zo-fz-tab-h4);
+    line-height: var(--zo-lh-h4-tab);
+  }
+
+  @media #{$sm, $xs} {
+    font-size: var(--zo-fz-mob-h4);
+    line-height: var(--zo-lh-h4-mob);
+  }
+}
+
+h5 {
+  font-size: var(--zo-fz-h5);
+  line-height: var(--zo-lh-h5);
+
+  @media #{$md} {
+    font-size: var(--zo-fz-tab-h5);
+    line-height: var(--zo-lh-h5-tab);
+  }
+
+  @media #{$sm, $xs} {
+    font-size: var(--zo-fz-mob-h5);
+    line-height: var(--zo-lh-h5-mob);
+  }
+}
+
+h6 {
+  font-size: var(--zo-fz-h6);
+  line-height: var(--zo-lh-h6);
+
+  @media #{$md} {
+    font-size: var(--zo-fz-tab-h6);
+    line-height: var(--zo-lh-h6-tab);
+  }
+
+  @media #{$sm, $xs} {
+    font-size: var(--zo-fz-mob-h6);
+    line-height: var(--zo-lh-h6-mob);
+  }
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+p {
+  font-family: var(--zo-ff-p);
+  font-size: var(--zo-fz-body);
+  font-weight: var(--zo-fw-normal);
+  color: var(--zo-text-body);
+  line-height: var(--zo-lh-p);
+  margin: 0;
+
+  @media #{$xs} {
+    font-size: var(--zo-fz-p2);
+    line-height: var(--zo-lh-p2);
+  }
+}

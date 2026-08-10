@@ -1,0 +1,210 @@
+//-------------------------------
+// Colors (Zo Theme)
+$color-white: #ffffff; 
+$color-black: #111827;
+$color-light-white: #70747D;
+$color-body: #A0A3A9;
+$color-heading: #001A48;
+$color-grey-1: #F3FAF5;
+$color-grey-2: #EEEEEE;
+$color-text-body: #6A6A6A;
+$color-primary: #FF6314;
+$color-secondary: #111827;
+$color-border-1: #E8E8EA;
+$color-bg-1: #F6F6F7;
+$color-bg-2: #F3F3F4;
+$color-bg-3: #111827;
+$color-bg-4:#414652;
+
+//-------------------------------
+// Preloader Variables
+$border-color: $color-primary;
+$background-color: $color-bg-3;
+$border-radius-big: 6px;
+$font-size-header: 16px;
+$car-color: $border-color;
+$spin-deg: 36deg;
+
+//-------------------------------
+// Keyframes
+@keyframes spin {
+  0%   { transform: translate(2px, 1px) rotate($spin-deg * 0); }
+  10%  { transform: translate(-1px, -3px) rotate($spin-deg * 1); }
+  20%  { transform: translate(-2px, 0px) rotate($spin-deg * 2); }
+  30%  { transform: translate(1px, 2px) rotate($spin-deg * 3); }
+  40%  { transform: translate(1px, -1px) rotate($spin-deg * 4); }
+  50%  { transform: translate(-1px, 3px) rotate($spin-deg * 5); }
+  60%  { transform: translate(-1px, 1px) rotate($spin-deg * 6); }
+  70%  { transform: translate(3px, 1px) rotate($spin-deg * 7); }
+  80%  { transform: translate(-2px, -1px) rotate($spin-deg * 8); }
+  90%  { transform: translate(2px, 1px) rotate($spin-deg * 9); }
+  100% { transform: translate(1px, -2px) rotate($spin-deg * 10); }
+}
+
+@keyframes speed {
+  0%   { transform: translate(2px, 1px) rotate(0deg); }
+  10%  { transform: translate(-1px, -3px) rotate(-1deg); }
+  20%  { transform: translate(-2px, 0px) rotate(1deg); }
+  30%  { transform: translate(1px, 2px) rotate(0deg); }
+  40%  { transform: translate(1px, -1px) rotate(1deg); }
+  50%  { transform: translate(-1px, 3px) rotate(-1deg); }
+  60%  { transform: translate(-1px, 1px) rotate(0deg); }
+  70%  { transform: translate(3px, 1px) rotate(-1deg); }
+  80%  { transform: translate(-2px, -1px) rotate(1deg); }
+  90%  { transform: translate(2px, 1px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes strikes {
+  from { left: 25px; }
+  to { left: -80px; opacity: 0; }
+}
+
+@keyframes dots {
+  from { width: 0px; }
+  to { width: 15px; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+// Fade in helper
+.fadeIn {
+  animation: fadeIn 0.4s both;
+}
+
+//-------------------------------
+// Loading Window
+.loading-window {
+  @extend .fadeIn;
+  background: $background-color;
+  border-radius: $border-radius-big;
+  border: 3px solid $border-color;
+  color: $car-color;
+  height: 200px;
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -150px;
+  z-index: 99;
+
+  .text {
+    font-size: $font-size-header;
+    position: absolute;
+    top: 75%;
+    left: 38%;
+  }
+
+  .dots {
+    display: inline-block;
+    width: 5px;
+    overflow: hidden;
+    vertical-align: bottom;
+    animation: dots 1.5s linear infinite;
+  }
+}
+
+//-------------------------------
+// Car
+.car {
+  position: absolute;
+  width: 117px;
+  height: 42px;
+  left: 92px;
+  top: 70px;
+
+  .strike {
+    position: absolute;
+    width: 11px;
+    height: 1px;
+    background: $car-color;
+    animation: strikes 0.2s linear infinite;
+
+    &.strike2 { top: 11px; animation-delay: 0.05s; }
+    &.strike3 { top: 22px; animation-delay: 0.1s; }
+    &.strike4 { top: 33px; animation-delay: 0.15s; }
+    &.strike5 { top: 44px; animation-delay: 0.2s; }
+  }
+
+  &-detail {
+    position: absolute;
+    display: block;
+    background: $car-color;
+    animation: speed 0.5s linear infinite;
+
+    &.spoiler {
+      width: 0;
+      height: 0;
+      top: 7px;
+      background: none;
+      border: 20px solid transparent;
+      border-bottom: 8px solid $car-color;
+      border-left: 20px solid $car-color;
+    }
+
+    &.back {
+      width: 92px;
+      height: 20px;
+      top: 15px;
+      left: 0px;
+    }
+
+    &.center {
+      width: 75px;
+      height: 35px;
+      left: 12px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 45px 40px;
+      border: 4px solid $car-color;
+      background: none;
+      box-sizing: border-box;
+    }
+
+    &.center1 {
+      width: 35px;
+      height: 35px;
+      left: 12px;
+      border-top-left-radius: 30px;
+    }
+
+    &.front {
+      width: 50px;
+      height: 20px;
+      top: 15px;
+      left: 67px;
+      border-top-right-radius: 50px 40px;
+      border-bottom-right-radius: 10px;
+    }
+
+    &.wheel {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      top: 20px;
+      left: 12px;
+      border: 3px solid $background-color;
+      background: linear-gradient(
+                    45deg, transparent 45%, $border-color 46%, $border-color 54%, transparent 55%
+                  ),
+                  linear-gradient(
+                    -45deg, transparent 45%, $border-color 46%, $border-color 54%, transparent 55%
+                  ),
+                  linear-gradient(
+                    90deg, transparent 45%, $border-color 46%, $border-color 54%, transparent 55%
+                  ),
+                  linear-gradient(
+                    0deg, transparent 45%, $border-color 46%, $border-color 54%, transparent 55%
+                  ),
+                  radial-gradient($border-color 29%, transparent 30%, transparent 50%, $border-color 51%),
+                  $background-color;
+      animation: spin 1s linear infinite;
+
+      &.wheel2 { left: 82px; }
+    }
+  }
+}

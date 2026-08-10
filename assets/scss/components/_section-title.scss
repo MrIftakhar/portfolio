@@ -1,0 +1,29 @@
+/***********************************
+*** Section Title Start ****
+***********************************/
+.section-title {
+    .sub-title {
+        line-height: 1.6;
+        color: var(--zo-theme-primary);
+        display: block;
+        padding-bottom: 8px;
+    }
+
+    h2 {
+        span {
+            display: block;
+
+            @media #{$lg} {
+                display: unset;
+            }
+        }
+        @media #{$lg}{
+            font-size: 45px;
+        }
+    }
+    h1{
+        @media #{$lg}{
+            font-size: 46px;
+        }
+    }
+}

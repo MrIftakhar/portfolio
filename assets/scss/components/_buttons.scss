@@ -1,0 +1,100 @@
+//Primary Button CSS
+.primary-btn {
+    font-size: var(--zo-fz-button);
+    padding: 20px 40px;
+    line-height: 1.2;
+    font-weight: var(--zo-fw-medium);
+    color: var(--zo-common-white);
+    background: var(--zo-heading-primary);
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-flex;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        color: var(--zo-common-white);
+        background: var(--zo-heading-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+    }
+
+    @media #{$xs, $sm, $md} {
+        padding: 20px 40px;
+        font-size: 16px;
+    }
+
+    @media #{$xl,$lg} {
+        padding: 20px 40px;
+    }
+}
+
+//light orange Button CSS
+.white-btn {
+    font-size: var(--zo-fz-button);
+    padding: 20px 40px;
+    line-height: 1.2;
+    font-weight: var(--zo-fw-medium);
+    color: var(--zo-common-black);
+    background: var(--zo-common-white);
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-flex;
+    transition: all ease-in-out .3s;
+    margin-right: 20px;
+
+    &:hover {
+        color: var(--zo-common-white);
+        background: var(--zo-heading-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+    }
+
+    @media #{$xs, $sm, $md} {
+        padding: 20px 40px;
+        font-size: 16px;
+    }
+
+    @media #{$xl,$lg} {
+        padding: 25px 40px;
+    }
+}
+
+//Learn More Button
+.learn-more-btn {
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: var(--zo-common-white);
+    background-color: var(--zo-theme-primary);
+    font-family: var(--zo-ff-p2);
+    font-size: var(--zo-fz-button);
+    font-weight: var(--zo-fw-sbold);
+    border-radius: 200px;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+
+    .learn-more-btn-icon {
+        svg {
+            path {
+                fill: var(--zo-theme-primary);
+            }
+        }
+    }
+
+    &:hover {
+        color: var(--zo-common-white);
+        background: var(--zo-heading-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+    }
+
+    @media #{$xs, $sm, $md} {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    @media #{$xl,$lg} {
+        padding: 8px 16px;
+    }
+
+}

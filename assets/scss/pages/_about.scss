@@ -1,0 +1,602 @@
+/* ==========================================
+   About Hero Section
+   ========================================== */
+.about-hero {
+    background-color: #061123;
+    /* Radial glow in the center-left similar to the reference design */
+    background-image: radial-gradient(circle at 30% 50%,
+            rgba(14, 43, 86, 0.6) 0%,
+            rgba(6, 17, 35, 1) 70%);
+    overflow: hidden;
+}
+
+.about-hero-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Left Column Styling */
+.hero-left {
+    margin-top: 150px;
+    padding-right: 30px;
+
+    h2 {
+        color: var(--zo-theme-primary);
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-bottom: 14px;
+
+        span {
+            color: var(--zo-theme-primary);
+            /* Keeps accent text clean if needed */
+        }
+    }
+
+    p {
+        font-size: var(--zo-fz-p4);
+        font-weight: 300;
+        margin-bottom: 35px;
+    }
+}
+
+/* Right Column Image Container */
+.hero-right {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        width: 100%;
+        max-width: 650px;
+        height: 650px;
+        object-fit: cover;
+        border-radius: 10px;
+        /* Smooth rounded image corners */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        /* Soft drop shadow */
+    }
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+
+    .hero-left {
+        padding-right: 0;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .hero-right {
+        justify-content: center;
+    }
+
+    .hero-right img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-left {
+        margin-top: 20px;
+
+        .white-btn {
+            margin-bottom: 50px;
+        }
+    }
+
+    .hero-right img {
+        height: 280px;
+        border-radius: 10px;
+    }
+}
+
+/* ==========================================
+   Expertise Section
+   ========================================== */
+.expertise {
+    background-color: #132345;
+    color: #ffffff;
+}
+
+.expertise-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Left Column Styling */
+.expertise-left {
+    padding-right: 40px;
+    margin-top: 100px;
+
+    span {
+        color: var(--zo-theme-primary);
+        font-size: var(--zo-fz-p5);
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: var(--zo-fz-p4);
+        font-weight: 300;
+        margin-bottom: 35px;
+    }
+}
+
+/* ==========================================
+   Right Column / Service Cards Grid
+   ========================================== */
+.expertise-right .boxes-wrapper,
+.expertise-right .boxs-wrapper {
+    margin-bottom: 24px;
+}
+
+/* Card Container */
+.boxs {
+    background-color: #222d42;
+    /* Slate blue card background */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 28px 24px;
+    height: 100%;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Hover Effect */
+.boxs:hover {
+    transform: translateY(-5px);
+    background-color: #28354d;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Icon Styling */
+.boxs img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+/* Card Heading: "Design to Code", "Frontend Dev", etc. */
+.boxs .headding {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Card Description */
+.boxs p:not(.headding) {
+    color: var(--zo-common-white);
+    font-size: var(--zo-fz-p6);
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+    .expertise-left {
+        padding-right: 0;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .expertise-left span {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .boxs {
+        padding: 22px 18px;
+    }
+
+    .expertise-right .boxes-wrapper,
+    .expertise-right .boxs-wrapper {
+        margin-bottom: 16px;
+    }
+}
+
+/* ==========================================
+   Process / Approach Section
+   ========================================== */
+.process {
+    background-color: #061123;
+    /* Deep navy background matching hero/expertise */
+}
+
+/* Centered Header Block */
+.process-top {
+    text-align: center;
+    margin-bottom: 80px;
+
+    span {
+        color: var(--zo-theme-primary);
+        font-size: var(--zo-fz-p5);
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+}
+
+
+/* Card Wrapper Reset */
+.card-wrapper {
+    height: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #151F34;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-wrapper:hover {
+    transform: translateY(-5px);
+    background-color: #28354d;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+/* Step Numbers: "01", "02", "03", "04" */
+.card span {
+    display: block;
+    color: var(--zo-common-white);
+    /* Muted slate blue number accent */
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Card Heading: "Understand", "Build", etc. */
+.card .head {
+    color: #9cbbf0;
+    /* Soft light blue heading */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    float: left;
+}
+
+/* Card Paragraph Text */
+.card p {
+    color: #94a3b8;
+    /* Muted slate body text */
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+    .process-top {
+        margin-bottom: 40px;
+    }
+
+    .card-wrapper {
+        margin-bottom: 32px;
+    }
+
+    /* Remove bottom margin on last item in mobile grid */
+    .col-sm-12:last-child .card-wrapper {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .card-wrapper {
+        margin-bottom: 32px;
+    }
+    .col-sm-12:last-child .card-wrapper {
+        margin-bottom: 0;
+        padding-bottom: 50px;
+    }
+}
+/* ==========================================
+   Academic / Educational Journey Section
+   ========================================== */
+.academic {
+  background-color: #061123;
+  color: #ffffff;
+
+  /* Header Block */
+  .academic-top {
+    text-align: center;
+    margin-bottom: 50px;
+
+    span {
+      display: inline-block;
+      color: #d97706; /* Warm orange accent */
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #ffffff;
+      margin-bottom: 0;
+    }
+  }
+
+  /* Card Layout Container */
+  .academic-body-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Main Education Card */
+  .academic-body {
+    background-color: #121c2e; /* Dark slate blue card background */
+    border-radius: 16px;
+    padding: 32px 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    margin-bottom: 30px;
+
+    /* Left Orange Vertical Accent Bar */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: #f57c00; /* Vibrant orange border bar */
+    }
+
+    /* Left Content Column */
+    .body-left {
+      .body-top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+        }
+
+        p {
+          color: #ffffff;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+      }
+
+      h4 {
+        color: #7893c4; /* Soft blue university heading */
+        margin-bottom: 14px;
+      }
+
+      p {
+        color: #94a3b8; /* Muted description text */
+        font-size: var(--zo-fz-p5);
+        font-weight: 300;
+        margin-bottom: 0;
+      }
+    }
+
+    /* Right Column (Year Badge) */
+    .body-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: 100%;
+
+      p {
+        display: inline-block;
+        background-color: #1a2538; /* Pill background */
+        color: #d97706; /* Orange text */
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 18px;
+        border-radius: 30px;
+        margin-bottom: 0;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 767px) {
+  .academic {
+    .academic-body {
+      padding: 24px 20px;
+
+      .body-right {
+        justify-content: flex-start;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+/* ==========================================
+   Mantra / Outside The Screen Section
+   ========================================== */
+.mantra {
+  background-color: #061123;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+
+  /* Radial glow on top right background */
+  background-image: radial-gradient(
+    circle at 85% 20%, 
+    rgba(30, 58, 100, 0.35) 0%, 
+    rgba(6, 17, 35, 1) 65%
+  );
+
+  /* Left Side Typography */
+  .mantra-left {
+    padding-right: 30px;
+
+    .tag {
+      display: block;
+      color: #d97706; /* Warm orange tag */
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-bottom: 0;
+      text-transform: uppercase;
+
+      /* Stack each word on a new line */
+      span {
+        display: block;
+      }
+
+      /* Orange words */
+      .orange {
+        color: #f57c00;
+      }
+
+      /* Italic "REPEAT." word */
+      .italic {
+        font-style: italic;
+      }
+    }
+  }
+
+  /* Right Side Card */
+  .mantra-right {
+    .mantra-right-wrapper {
+      background-color: #121c2e; /* Dark slate card background */
+      border-radius: 20px;
+      padding: 44px 38px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+
+      span.tag {
+        display: block;
+        color: #d97706; /* Orange section title */
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        margin-bottom: 18px;
+      }
+
+      h5 {
+        color: #e2e8f0;
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: var(--zo-fz-p6);
+        font-weight: 300;
+        margin-bottom: 32px;
+      }
+
+      /* Bottom Hobby Badges */
+      .right-bottom {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        .hobby-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 40px;
+              height: 40px;
+              object-fit: contain;
+            }
+          }
+
+          span {
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0;
+            text-transform: none;
+            letter-spacing: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 991px) {
+  .mantra {
+    .mantra-left {
+      padding-right: 0;
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 42px;
+      }
+    }
+
+    .mantra-right {
+      .mantra-right-wrapper {
+        padding: 30px 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .mantra {
+    .mantra-left h2 {
+      font-size: 34px;
+    }
+
+    .mantra-right .mantra-right-wrapper .right-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+}
