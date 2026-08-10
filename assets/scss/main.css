@@ -950,40 +950,6 @@ p {
   font-weight: var(--zo-fw-sbold);
   border-radius: 200px;
   transition: all ease-in-out 0.3s;
-  curso<<<<<<< HEAD
-  margin-right: 20px;
-=======
->>>>>>> 0fabd7bc5fb1a388d12503c68b969266e9aed5b4
-}
-.white-btn:hover {
-  color: var(--zo-common-white);
-  background: var(--zo-heading-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
-}
-@media (max-width: 575.98px), only screen and (min-width: 576px) and (max-width: 767.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .white-btn {
-    padding: 20px 40px;
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .white-btn {
-    padding: 25px 40px;
-  }
-}
-
-.learn-more-btn {
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  color: var(--zo-common-white);
-  background-color: var(--zo-theme-primary);
-  font-family: var(--zo-ff-p2);
-  font-size: var(--zo-fz-button);
-  font-weight: var(--zo-fw-sbold);
-  border-radius: 200px;
-  transition: all ease-in-out 0.3s;
   cursor: pointer;
 }
 .learn-more-btn .learn-more-btn-icon svg path {
@@ -4171,3 +4137,68 @@ body.bg-dark-custom {
     opacity: 0.8;
   }
 }
+/* ==========================================
+   Banner / Call To Action Section
+   ========================================== */
+.banner {
+  background-color: #061123;
+  text-align: center;
+  /* Flexbox for vertical & horizontal centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px; /* Adjust height as needed (e.g., 50vh, 500px, etc.) */
+}
+.banner .container {
+  width: 100%;
+}
+.banner .banner-body {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Center-align all children elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Heading Text */
+}
+.banner .banner-body .text-haed, .banner .banner-body h2, .banner .banner-body h5 {
+  color: #ffffff;
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 36px;
+}
+.banner .banner-body {
+  /* Button Group Wrapper */
+}
+.banner .banner-body .banner-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  /* Shared Button Styles */
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 767px) {
+  .banner {
+    min-height: 350px; /* Slightly smaller minimum height on mobile */
+  }
+  .banner .banner-body .text-haed, .banner .banner-body h2, .banner .banner-body h5 {
+    font-size: 36px;
+    margin-bottom: 28px;
+  }
+  .banner .banner-body .banner-btns {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .banner .banner-body .banner-btns a {
+    width: 100%;
+    max-width: 260px;
+  }
+}/*# sourceMappingURL=main.css.map */

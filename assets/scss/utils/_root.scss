@@ -16,7 +16,7 @@
     */
     @each $color, $shades in $colors {
         @each $shade, $value in $shades {
-            --zo-#{$color}-#{$shade}: #{$value};
+            --zo-#{$color}-#{"" + $shade}: #{$value};
         }
     }
 
@@ -27,7 +27,7 @@
     
     @each $fw, $shades in $font-scale {
         @each $shade, $value in $shades {
-            --zo-#{$fw}-#{$shade}: #{$value};
+            --zo-#{$fw}-#{"" + $shade}: #{$value};
         }
     }
 

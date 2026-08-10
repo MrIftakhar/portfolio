@@ -323,3 +323,78 @@ body.bg-dark-custom {
     opacity: 0.8;
   }
 }
+/* ==========================================
+   Banner / Call To Action Section
+   ========================================== */
+.banner {
+  background-color: #061123;
+  text-align: center;
+  
+  /* Flexbox for vertical & horizontal centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px; /* Adjust height as needed (e.g., 50vh, 500px, etc.) */
+
+  .container {
+    width: 100%;
+  }
+
+  .banner-body {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    /* Center-align all children elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Heading Text */
+    .text-haed, h2, h5 {
+      color: #ffffff;
+      font-size: 65px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 36px;
+    }
+
+    /* Button Group Wrapper */
+    .banner-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+
+      /* Shared Button Styles */
+    }
+  }
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 767px) {
+  .banner {
+    min-height: 350px; /* Slightly smaller minimum height on mobile */
+
+    .banner-body {
+      .text-haed, h2, h5 {
+        font-size: 36px;
+        margin-bottom: 28px;
+      }
+
+      .banner-btns {
+        flex-direction: column;
+        gap: 16px;
+
+        a {
+          width: 100%;
+          max-width: 260px;
+        }
+      }
+    }
+  }
+}
