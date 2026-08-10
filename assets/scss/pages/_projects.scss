@@ -1,0 +1,236 @@
+/* ==========================================
+   Project Hero Section
+   ========================================== */
+.project-hero {
+  background-color: #061123;
+  color: #ffffff;
+  text-align: left;
+  
+  /* Soft lighting overlay matching the design */
+  background-image: radial-gradient(
+    circle at 90% 10%, 
+    rgba(30, 58, 100, 0.25) 0%, 
+    rgba(6, 17, 35, 1) 70%
+  );
+
+  .hero-top-project {
+    max-width: 720px; /* Limits line length for clean readability */
+
+    /* "SELECTED WORK" Tag with Orange Bar */
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #d97706; /* Warm orange color */
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 16px;
+    }
+
+    /* "Projects" Heading */
+    h2 {
+      color: #ffffff;
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 24px;
+    }
+
+    /* Paragraph Body Text */
+    p {
+      color: #94a3b8; /* Muted slate text */
+      font-size: 15.5px;
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 767px) {
+  .project-hero {
+    .hero-top-project {
+      h2 {
+        font-size: 38px;
+        margin-bottom: 18px;
+      }
+
+      p {
+        font-size: 14.5px;
+      }
+    }
+  }
+}
+/* ==========================================================================
+   Projects Card Grid & Hover Effect Styles
+   ========================================================================== */
+
+.projects-section {
+  background-color: #0b0f19;
+}
+
+/* 2-Column Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-span-full {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(#ff6b00, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+
+    .project-img {
+      transform: scale(1.05);
+    }
+
+    .project-img-overlay {
+      opacity: 1;
+    }
+
+    .hover-link-btn {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Image Thumbnail & Overlays */
+  .project-thumb {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #1f2937;
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    /* Top-Right Badge */
+    .project-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e5e7eb;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      z-index: 2;
+    }
+
+    /* Hover Overlay & Button */
+    .project-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 15, 25, 0.75);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    .hover-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #ff6b00;
+      color: #0b0f19;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.65rem 1.35rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transform: translateY(15px);
+      opacity: 0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #ffffff;
+        color: #0b0f19;
+      }
+    }
+  }
+
+  /* Card Content */
+  .project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+  }
+
+  /* Tech Stack Badges */
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    .tech-tag {
+      background-color: #1f2937;
+      color: #9ca3af;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  }
+}
+.text-project {
+  color: var(--zo-common-white);
+  font-size: var(--zo-fz-p5);
+  line-height: 1.5;
+}

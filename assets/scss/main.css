@@ -4140,7 +4140,7 @@ body.bg-dark-custom {
 /* ==========================================
    Banner / Call To Action Section
    ========================================== */
-.banner {
+.experience-banner {
   background-color: #061123;
   text-align: center;
   /* Flexbox for vertical & horizontal centering */
@@ -4149,10 +4149,10 @@ body.bg-dark-custom {
   justify-content: center;
   min-height: 450px; /* Adjust height as needed (e.g., 50vh, 500px, etc.) */
 }
-.banner .container {
+.experience-banner .container {
   width: 100%;
 }
-.banner .banner-body {
+.experience-banner .banner-body {
   max-width: 800px;
   margin: 0 auto;
   /* Center-align all children elements */
@@ -4162,7 +4162,7 @@ body.bg-dark-custom {
   justify-content: center;
   /* Heading Text */
 }
-.banner .banner-body .text-haed, .banner .banner-body h2, .banner .banner-body h5 {
+.experience-banner .banner-body .text-haed, .experience-banner .banner-body h2, .experience-banner .banner-body h5 {
   color: #ffffff;
   font-size: 65px;
   font-weight: 700;
@@ -4170,10 +4170,10 @@ body.bg-dark-custom {
   line-height: 1.15;
   margin-bottom: 36px;
 }
-.banner .banner-body {
+.experience-banner .banner-body {
   /* Button Group Wrapper */
 }
-.banner .banner-body .banner-btns {
+.experience-banner .banner-body .banner-btns {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4201,4 +4201,229 @@ body.bg-dark-custom {
     width: 100%;
     max-width: 260px;
   }
+}
+/*----------------------------------------*/
+/*  12. PAGES projects CSS START
+/*----------------------------------------*/
+/* ==========================================
+   Project Hero Section
+   ========================================== */
+.project-hero {
+  background-color: #061123;
+  color: #ffffff;
+  text-align: left;
+  /* Soft lighting overlay matching the design */
+  background-image: radial-gradient(circle at 90% 10%, rgba(30, 58, 100, 0.25) 0%, rgb(6, 17, 35) 70%);
+}
+.project-hero .hero-top-project {
+  max-width: 720px; /* Limits line length for clean readability */
+  /* "SELECTED WORK" Tag with Orange Bar */
+}
+.project-hero .hero-top-project span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #d97706; /* Warm orange color */
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 16px;
+}
+.project-hero .hero-top-project {
+  /* "Projects" Heading */
+}
+.project-hero .hero-top-project h2 {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+.project-hero .hero-top-project {
+  /* Paragraph Body Text */
+}
+.project-hero .hero-top-project p {
+  color: #94a3b8; /* Muted slate text */
+  font-size: 15.5px;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 767px) {
+  .project-hero .hero-top-project h2 {
+    font-size: 38px;
+    margin-bottom: 18px;
+  }
+  .project-hero .hero-top-project p {
+    font-size: 14.5px;
+  }
+}
+/* ==========================================================================
+   Projects Card Grid & Hover Effect Styles
+   ========================================================================== */
+.projects-section {
+  background-color: #0b0f19;
+}
+
+/* 2-Column Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.projects-grid .grid-span-full {
+  grid-column: 1/-1;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 107, 0, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+.project-card:hover .project-img-overlay {
+  opacity: 1;
+}
+.project-card:hover .hover-link-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+.project-card {
+  /* Image Thumbnail & Overlays */
+}
+.project-card .project-thumb {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #1f2937;
+}
+.project-card .project-thumb .project-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.project-card .project-thumb {
+  /* Top-Right Badge */
+}
+.project-card .project-thumb .project-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  z-index: 2;
+}
+.project-card .project-thumb {
+  /* Hover Overlay & Button */
+}
+.project-card .project-thumb .project-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 15, 25, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+.project-card .project-thumb .hover-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff6b00;
+  color: #0b0f19;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transform: translateY(15px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.project-card .project-thumb .hover-link-btn:hover {
+  background-color: #ffffff;
+  color: #0b0f19;
+}
+.project-card {
+  /* Card Content */
+}
+.project-card .project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-card .project-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.project-card .project-description {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+.project-card {
+  /* Tech Stack Badges */
+}
+.project-card .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.project-card .tech-tags .tech-tag {
+  background-color: #1f2937;
+  color: #9ca3af;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-project {
+  color: var(--zo-common-white);
+  font-size: var(--zo-fz-p5);
+  line-height: 1.5;
 }/*# sourceMappingURL=main.css.map */
