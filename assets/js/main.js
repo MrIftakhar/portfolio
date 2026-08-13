@@ -432,9 +432,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Contact Form (Formspree AJAX)
+    // Contact Form (Formspree AJAX) - skip when EmailJS is enabled on the form
     const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
+    if (contactForm && !contactForm.dataset.emailjs) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 

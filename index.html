@@ -468,7 +468,7 @@
           <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
             <div class="contact-form-col">
               <div class="contact-card">
-                <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+                <form id="contactForm" action="#" method="POST" novalidate data-emailjs="true">
                   <label for="contactName">Name</label>
                   <input type="text" id="contactName" name="name" placeholder="Your Name" required />
 
@@ -489,7 +489,7 @@
 
                   <p class="contact-alt-text">
                     Prefer email?
-                    <a href="mailto:your@email.com?subject=Portfolio%20Contact">
+                    <a href="mailto:princerok65@gmail.com?subject=Portfolio%20Contact">
                       Email me directly</a>
                   </p>
                 </form>
@@ -543,6 +543,9 @@
   <script src="assets/js/swiper.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/script.js"></script>
+  <!-- EmailJS SDK (use jsDelivr mirror) + client-side handler -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="assets/js/emailjs-handler.js"></script>
 </body>
 
 </html>

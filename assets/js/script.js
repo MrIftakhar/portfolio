@@ -147,7 +147,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // =========================================================================
   const contactForm = document.getElementById('contactForm');
 
-  if (contactForm) {
+  // Skip the Formspree AJAX handler when EmailJS is used (marked by data-emailjs)
+  if (contactForm && !contactForm.dataset.emailjs) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
